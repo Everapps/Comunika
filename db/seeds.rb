@@ -11,7 +11,7 @@ if Rails.env.development?
     Community.create!(name: Faker::Company.name, subdomain: Faker::Internet.domain_word)
   end
   community = Community.first
-  User.create(community: community, name: Faker::Name.name, email: Faker::Internet.email, role: 'tenant')
-  User.create(community: community, name: Faker::Name.name, email: Faker::Internet.email, role: 'owner')
-  User.create(community: community, name: Faker::Name.name, email: Faker::Internet.email, role: 'manager')
+  User.create(community: community, name: Faker::Name.name, email: Faker::Internet.email, contact_number: Faker::PhoneNumber::phone_number, role: 'tenant')
+  User.create(community: community, name: Faker::Name.name, email: Faker::Internet.email, contact_number: Faker::PhoneNumber::phone_number, role: 'owner')
+  User.create(community: community, name: Faker::Name.name, email: Faker::Internet.email, contact_number: Faker::PhoneNumber::phone_number, role: 'manager')
 end

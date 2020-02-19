@@ -46,6 +46,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'faker'
+  gem "factory_bot_rails"
+  gem 'vcr'
+  gem 'webmock'
+  gem 'capybara'
+
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -60,3 +67,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Use sidekiq for asynchronous SMS sending
+gem 'sidekiq'
+
+# Use the twilio-ruby gem to send SMS notification messages
+gem 'twilio-ruby'
