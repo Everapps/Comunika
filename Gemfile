@@ -39,7 +39,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'activeadmin',  '~> 1.4.0'
 gem 'devise',       '~> 4.6.0'
 
+# Only on Windows to reduce scanning
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+# Add Twilio gem
+gem 'twilio-ruby'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
