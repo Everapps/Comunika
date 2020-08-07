@@ -27,6 +27,8 @@ default: &default
 development:
   <<: *default
   database: comunika_development
+  username: <%= ENV['DEV_DATABASE_USER'] || ENV['POSTGRESQL_USERNAME']  %>
+  password: <%= ENV['DEV_DATABASE_PASSWORD'] || ENV['COMUNIKA_DATABASE_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,6 +63,8 @@ development:
 test:
   <<: *default
   database: comunika_test
+  username: <%= ENV['TEST_DATABASE_USER'] || ENV['POSTGRESQL_USERNAME']  %>
+  password: <%= ENV['TEST_DATABASE_PASSWORD'] || ENV['COMUNIKA_DATABASE_PASSWORD'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
