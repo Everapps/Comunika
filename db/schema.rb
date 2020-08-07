@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_19_200844) do
+ActiveRecord::Schema.define(version: 2020_08_07_203122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_02_19_200844) do
     t.string "name"
     t.string "email"
     t.string "role"
+    t.string "contact_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["community_id"], name: "index_users_on_community_id"

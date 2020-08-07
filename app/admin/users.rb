@@ -4,6 +4,7 @@ ActiveAdmin.register User do
       f.input :community
       f.input :name
       f.input :email
+      f.input :contact_number
       f.input :role, collection: User::ROLES, include_blank: false
     end
     f.actions
