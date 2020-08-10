@@ -7,12 +7,9 @@ ActiveAdmin.register Message do
       @message = Message.new(message_params)
       @user = User.find(@message.user_id)
 
-      # Prepend message with specific address
-      @message.message = "To #{@user.role.capitalize}: " + @message.message
-
       respond_to do |format|
         if @message.save
-          SendTextMessageJob.perform_later(@user.contact_number, @message.message)
+          SendTextMessageJob.perform_later(@user.contact_number, "To #{@user.role.capitalize}: " + @message.message)
           format.html { redirect_to admin_users_path, notice: "Message was successfully sent to #{@user.name}." }
         else
           format.html { redirect_to "/admin/users/#{@user.id}/create_sms", notice: "Error: unable to send message to " + @user.name }
