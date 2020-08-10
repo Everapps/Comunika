@@ -16,13 +16,14 @@ ActiveAdmin.register User do
   end
 
   # Return current user to page
-  member_action :create_sms, :method=>:get do
+  member_action :create_sms, :method => :get do
     @user = User.find(params[:id])
+    @message = Message.new :message => "To #{@user.role.capitalize}: ", :user_id => @user.id
+    @maximum_length = Message.validators_on(:message).first.options[:maximum]
   end
 
   controller do
     def createsms
-
     end
   end
 end
