@@ -18,7 +18,7 @@ ActiveAdmin.register User do
   # Return current user to page
   member_action :create_sms, :method => :get do
     @user = User.find(params[:id])
-    @message = Message.new :message => "To #{@user.role.capitalize}: ", :user_id => @user.id
+    @message = Message.new :message => "", :user_id => @user.id
     @maximum_length = Message.validators_on(:message).first.options[:maximum]
   end
 
