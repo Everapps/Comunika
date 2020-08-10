@@ -10,6 +10,7 @@ class SendTextMessageJob < ApplicationJob
     )
   end
 
+
   def init_twilio
     account_sid = ENV['TWILIO_SID']
     auth_token = ENV['TWILIO_TOKEN']
