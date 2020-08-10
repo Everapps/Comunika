@@ -1,0 +1,31 @@
+<%= form_for :message, :url => { :controller => "messages", :action => "create" }, :html => { :style => "width: 50%;" } do |f| %>
+
+  <%= f.hidden_field :user_id %>
+
+  <div class="field">
+
+    <%= f.label :message %>
+    <%= f.text_field :message, placeholder: @placeholder, :maxlength => @maximum_length, id: "message_text" %> <br>
+    <div style="text-align: center;">
+      Characters left: <span id="counter" data-maximum-length="<%= @maximum_length %>"><%= @maximum_length %></span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </div>
+<% end %>
+
+<script>
+    $(document).ready(function () {
+        var message_text = $("#message_text");
+        var counter = $("#counter");
+        var max_length = counter.data("maximum-length");
+
+        message_text.keyup(function () {
+            counter.text(max_length - $(this).val().length);
+        });
+        counter.text(max_length - $(message_text).val().length);
+    });
+</script>

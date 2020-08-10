@@ -1,3 +1,5 @@
 <h2>Sending SMS message to <%= @user.name %></h2>
 
+<%= render "form", :message => @message %><br>
+
 <%= link_to "Back to users", admin_users_path %>
