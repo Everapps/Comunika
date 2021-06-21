@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'activeadmin',  '~> 1.4.0'
 gem 'devise',       '~> 4.6.0'
+gem 'twilio-ruby', '~> 5.55.0'
+gem 'phonelib', '~> 0.6.51'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +48,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'faker'
+  gem 'pry', '~> 0.12.2'
 end
 
 group :development do
