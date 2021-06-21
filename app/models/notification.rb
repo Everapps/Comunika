@@ -3,10 +3,6 @@ class Notification < ApplicationRecord
 
   after_create :send_notification
 
-   def set_locale
-      self.locale = I18n.locale
-   end
-
   validates :message, presence: true, length: { minimum: 2, maximum: 160 }
 
   protected
