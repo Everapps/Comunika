@@ -20,7 +20,7 @@ module Twilio
         .create({
           body: body,
           to: to_number,
-          from: ENV['TWILIO_FROM_NUMBER']
+          from: ENV['TWILIO_MAGIC_NUMBER']
         })
     end
   end

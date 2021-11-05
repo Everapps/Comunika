@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twilio.com/2010-04-01/Accounts/ACe52b7093f48a74fdcd2cde6265ec8dfd/Messages.json
+    body:
+      encoding: UTF-8
+      string: Body=To+Tenant%3AIste+quia+blanditiis+et.&From=%2B15005550006&To=%2B18456149577
+    headers:
+      User-Agent:
+      - twilio-ruby/5.61.0 (ruby/x86_64-darwin19 2.5.3-p105)
+      Accept-Charset:
+      - utf-8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Authorization:
+      - Basic QUNlNTJiNzA5M2Y0OGE3NGZkY2QyY2RlNjI2NWVjOGRmZDo1ZGY3NGU5MWFmM2M3YTcwYmZhOGNkMDAyZmM5MjFlNg==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 05 Nov 2021 08:57:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '798'
+      Connection:
+      - keep-alive
+      Twilio-Concurrent-Requests:
+      - '1'
+      Twilio-Request-Id:
+      - RQc9a2e1f17710c6af9491bd35e1e357e0
+      Twilio-Request-Duration:
+      - '0.044'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      X-Home-Region:
+      - us1
+      X-Api-Domain:
+      - api.twilio.com
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM6fc9042d251e42e793f7f054c54e88e5", "date_created": "Fri,
+        05 Nov 2021 08:57:36 +0000", "date_updated": "Fri, 05 Nov 2021 08:57:36 +0000",
+        "date_sent": null, "account_sid": "ACe52b7093f48a74fdcd2cde6265ec8dfd", "to":
+        "+18456149577", "from": "+15005550006", "messaging_service_sid": null, "body":
+        "To Tenant:Iste quia blanditiis et.", "status": "queued", "num_segments":
+        "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01",
+        "price": null, "price_unit": "USD", "error_code": null, "error_message": null,
+        "uri": "/2010-04-01/Accounts/ACe52b7093f48a74fdcd2cde6265ec8dfd/Messages/SM6fc9042d251e42e793f7f054c54e88e5.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACe52b7093f48a74fdcd2cde6265ec8dfd/Messages/SM6fc9042d251e42e793f7f054c54e88e5/Media.json"}}'
+  recorded_at: Fri, 05 Nov 2021 08:57:36 GMT
+recorded_with: VCR 6.0.0
