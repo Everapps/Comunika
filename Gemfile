@@ -41,6 +41,8 @@ gem 'devise',       '~> 4.6.0'
 
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: 'd5ebc0cd846dcc68142622c76ad71d021768b7c2' # todo: upgrade rails version which removes this dep
 
+gem 'twilio-ruby'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
