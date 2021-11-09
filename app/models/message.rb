@@ -7,7 +7,11 @@ class Message < ApplicationRecord
   validates :message, presence: true,
                       length: { in: 1..160 }
 
+  private
+
   def notify!
-    SendSmsJob.perform_later(user, message)
+    prepended_message = "#{user.prepend_text} #{message}".strip
+
+    SendSmsJob.perform_later(user, prepended_message)
   end
 end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  enum roles: {
+  enum role: {
     tenant: 'tenant',
     owner: 'owner',
     manager: 'manager'
@@ -12,4 +12,9 @@ class User < ApplicationRecord
 
   scope :managers, -> { where(role: 'manager') }
   scope :owners, -> { where(role: 'owner') }
+
+  def prepend_text
+    return 'To Tenant:' if tenant?
+    return 'To Owner:' if owner?
+  end
 end
