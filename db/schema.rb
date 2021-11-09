@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_19_200844) do
+ActiveRecord::Schema.define(version: 2021_11_08_232740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,16 @@ ActiveRecord::Schema.define(version: 2019_02_19_200844) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.text "message"
+    t.bigint "user_id"
+    t.bigint "admin_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_user_id"], name: "index_messages_on_admin_user_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.bigint "community_id"
     t.string "name"
@@ -55,8 +65,11 @@ ActiveRecord::Schema.define(version: 2019_02_19_200844) do
     t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone_number"
     t.index ["community_id"], name: "index_users_on_community_id"
   end
 
+  add_foreign_key "messages", "admin_users"
+  add_foreign_key "messages", "users"
   add_foreign_key "users", "communities"
 end
