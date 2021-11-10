@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twilio.com/2010-04-01/Accounts/AC506acc8008abd3b9d4fde96d1f736e79/Messages.json
+    body:
+      encoding: UTF-8
+      string: Body=Hello+world%21&From=%2B18506800491&To=%2B50583898321
+    headers:
+      User-Agent:
+      - twilio-ruby/5.61.0 (ruby/x86_64-darwin20 2.5.3-p105)
+      Accept-Charset:
+      - utf-8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Authorization:
+      - Basic QUM1MDZhY2M4MDA4YWJkM2I5ZDRmZGU5NmQxZjczNmU3OTpjMTA4ZTU2ZWNhYzFhYWFhMGU2ZGQ1NDE3NGFkMDM5Ng==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 09 Nov 2021 04:51:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '814'
+      Connection:
+      - keep-alive
+      Twilio-Concurrent-Requests:
+      - '1'
+      Twilio-Request-Id:
+      - RQ54f71a27f83ccc414c5d7e8bf0cceea1
+      Twilio-Request-Duration:
+      - '0.122'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      X-Home-Region:
+      - us1
+      X-Api-Domain:
+      - api.twilio.com
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM1c36f19b9aa648948872824222823978", "date_created": "Tue,
+        09 Nov 2021 04:51:27 +0000", "date_updated": "Tue, 09 Nov 2021 04:51:27 +0000",
+        "date_sent": null, "account_sid": "AC506acc8008abd3b9d4fde96d1f736e79", "to":
+        "+50583898321", "from": "+18506800491", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Hello world!", "status": "queued",
+        "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version":
+        "2010-04-01", "price": null, "price_unit": "USD", "error_code": null, "error_message":
+        null, "uri": "/2010-04-01/Accounts/AC506acc8008abd3b9d4fde96d1f736e79/Messages/SM1c36f19b9aa648948872824222823978.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/AC506acc8008abd3b9d4fde96d1f736e79/Messages/SM1c36f19b9aa648948872824222823978/Media.json"}}'
+  recorded_at: Tue, 09 Nov 2021 04:51:27 GMT
+recorded_with: VCR 6.0.0
